@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b0a">
+  <meta name="description" content="Deploy TEDDY-XMD with pairing, GitHub fork and hosting options. Powered by Teddy Tech.">
+  <title>TEDDY-XMD | Deployment Center</title>
+  <style>
+*{box-sizing:border-box} :root{--bg:#080b0a;--panel:#101613;--panel2:#121b16;--line:#24352a;--green:#00e676;--red:#ff334b;--muted:#9aa9a0;--white:#f2f7f3}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}.ambient{position:fixed;width:420px;height:420px;border-radius:50%;filter:blur(130px);opacity:.12;pointer-events:none;z-index:-1}.ambient-one{background:var(--green);top:100px;left:-250px}.ambient-two{background:var(--red);right:-280px;top:700px}.topbar{height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 max(6vw,22px);border-bottom:1px solid #ffffff12;background:#080b0ad9;backdrop-filter:blur(16px);position:sticky;top:0;z-index:10}.brand{display:flex;align-items:center;gap:11px;color:var(--white);text-decoration:none;font-weight:700;letter-spacing:.4px;font-size:17px}.brand-mark{font-size:28px}.accent{color:var(--green)}.brand small{display:block;font:9px Consolas,monospace;letter-spacing:2px;color:var(--muted);margin-top:3px}.topbar nav{display:flex;gap:30px}.topbar nav a{color:#b9c5bd;text-decoration:none;font-size:13px;transition:.2s}.topbar nav a:hover{color:var(--green)}.menu-toggle{display:none;background:none;border:1px solid var(--line);color:white;border-radius:8px;padding:8px 11px;font-size:18px}.hero{max-width:1120px;margin:auto;padding:112px 24px 90px}.eyebrow{font:11px Consolas,monospace;letter-spacing:2px;color:var(--green);display:flex;align-items:center;gap:9px}.pulse{height:7px;width:7px;background:var(--green);border-radius:50%;box-shadow:0 0 14px var(--green)}h1{font-size:clamp(48px,8vw,88px);line-height:.98;letter-spacing:-4px;margin:28px 0 22px}.gradient-text{background:linear-gradient(90deg,var(--green),#a5ffca 55%,var(--red));background-clip:text;-webkit-background-clip:text;color:transparent}.hero-copy{font-size:17px;line-height:1.7;color:var(--muted);max-width:590px}.hero-actions{display:flex;gap:13px;margin-top:32px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:14px 20px;border-radius:8px;text-decoration:none;font-weight:700;font-size:13px;transition:transform .2s,box-shadow .2s;border:1px solid transparent}.btn:hover,.deploy-card:hover,.community-card:hover{transform:translateY(-3px)}.btn-primary{background:var(--green);color:#061009;box-shadow:0 8px 30px #00e67622}.btn-outline{border-color:#496052;color:var(--white);background:#ffffff05}.btn-outline:hover{border-color:var(--green)}.hero-meta{display:flex;gap:24px;flex-wrap:wrap;margin-top:58px;color:#718078;font:10px Consolas,monospace;letter-spacing:1.2px}.hero-meta span:first-child{color:var(--green)}.section{max-width:1120px;margin:0 auto;padding:65px 24px}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:28px}.section-heading h2{font-size:clamp(30px,4vw,42px);letter-spacing:-1.5px;margin:10px 0 0}.section-heading>p{max-width:390px;color:var(--muted);line-height:1.6;font-size:13px;margin:0 0 4px}.pair-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.feature-card{background:linear-gradient(145deg,#121a15,#0d120f);border:1px solid var(--line);border-radius:14px;padding:27px;min-height:265px}.session-card{border-top:2px solid var(--green)}.secondary-card{border-top:2px solid var(--red)}.card-icon{font-size:27px;color:var(--green);margin-bottom:18px}.secondary-card .card-icon{color:var(--red)}.card-tag{font:10px Consolas,monospace;letter-spacing:1.5px;color:var(--muted)}.feature-card h3{font-size:22px;margin:9px 0}.feature-card p{color:var(--muted);font-size:13px;line-height:1.65;max-width:470px;min-height:42px}.full{width:100%;margin-top:12px}.btn-disabled{background:#ffffff08;color:#829087;border-color:#ffffff10;cursor:not-allowed}.notice,.support-note{font-size:11px;color:#849188;line-height:1.6;margin-top:15px}.repo-panel{display:flex;align-items:center;gap:18px;padding:23px;border:1px solid var(--line);border-radius:13px;background:var(--panel)}.repo-symbol{width:48px;height:48px;border-radius:12px;background:#1a2c20;color:var(--green);display:grid;place-items:center;font-size:27px}.repo-info{display:flex;flex-direction:column;gap:5px;flex:1}.repo-info strong{font-size:15px}.repo-info span{font:11px Consolas,monospace;color:var(--muted)}.repo-actions{display:flex;gap:9px;flex-wrap:wrap}.repo-actions .btn{padding:12px 15px;font-size:11px}.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:14px}.mini-card{border:1px solid #ffffff12;background:#ffffff03;padding:18px;border-radius:10px}.mini-number{display:block;color:var(--green);font:10px Consolas,monospace;margin-bottom:14px}.mini-card strong{font-size:14px}.mini-card p{font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:0}.deploy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.deploy-card{display:flex;flex-direction:column;align-items:flex-start;min-height:210px;padding:20px;background:var(--panel);border:1px solid var(--line);border-radius:12px;text-decoration:none;color:var(--white);transition:.2s}.deploy-card:hover{border-color:#00e67688;box-shadow:0 12px 35px #00e6760d}.platform-icon{width:35px;height:35px;display:grid;place-items:center;border-radius:9px;font-weight:700;margin-bottom:14px;background:#1b2920;color:var(--green)}.heroku{background:#32224c;color:#c7a9ff}.railway{background:#252525;color:white}.render{background:#18352b;color:#8bffc5}.replit{background:#3a261b;color:#ff9e59}.ptero{background:#172d42;color:#71baff}.kata{background:#30241c;color:#ffc06d}.bot{background:#192e28;color:#8bffc5}.vps{background:#202c3b;color:#a5caff}.platform-name{font-weight:700;font-size:15px}.platform-desc{font-size:11px;color:var(--muted);line-height:1.55;margin:7px 0 14px}.platform-link{margin-top:auto;font:11px Consolas,monospace;color:var(--green)}.community-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.community-card{display:flex;flex-direction:column;align-items:flex-start;padding:22px;background:var(--panel);border:1px solid var(--line);border-radius:12px;text-decoration:none;color:var(--white);transition:.2s;min-height:180px}.community-card:hover{border-color:#00e67688}.community-icon{font-size:24px;color:var(--green);margin-bottom:17px}.coffee .community-icon{color:#ffc16d}.community-card strong{font-size:15px}.community-card span:not(.community-icon){font-size:11px;color:var(--muted);margin-top:6px}.community-card b{font:11px Consolas,monospace;color:var(--green);margin-top:auto;padding-top:18px}footer{max-width:1120px;margin:45px auto 0;padding:25px 24px 35px;border-top:1px solid #ffffff15;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#748078;font:10px Consolas,monospace}.footer-brand{font-family:Arial,Helvetica,sans-serif;color:var(--white);font-weight:700;text-decoration:none;font-size:13px}@media(max-width:760px){.topbar{height:68px}.menu-toggle{display:block}.topbar nav{display:none;position:absolute;top:68px;left:0;right:0;background:#0b100d;border-bottom:1px solid var(--line);padding:18px 24px;flex-direction:column;gap:18px}.topbar nav.open{display:flex}.hero{padding-top:85px}.section-heading{display:block}.section-heading>p{margin-top:12px}.pair-grid,.deploy-grid,.community-grid{grid-template-columns:1fr 1fr}.repo-panel{align-items:flex-start;flex-wrap:wrap}.repo-info{min-width:calc(100% - 75px)}.repo-actions{width:100%}.repo-actions .btn{flex:1}.mini-grid{grid-template-columns:1fr 1fr}}@media(max-width:480px){h1{letter-spacing:-2.5px}.hero-copy{font-size:15px}.pair-grid,.deploy-grid,.community-grid,.mini-grid{grid-template-columns:1fr}.hero-meta{gap:12px}.feature-card{min-height:unset}.section{padding-top:48px;padding-bottom:48px}.repo-actions{flex-direction:column}.repo-actions .btn{width:100%}footer{flex-direction:column}}
+
+  </style>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="TEDDY-XMD home">
+      <span class="brand-mark">🧸</span><span>TEDDY<span class="accent">-XMD</span><small>DEPLOYMENT CENTER</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="nav">
+      <a href="#deploy">Deploy</a><a href="#pairing">Get Session</a><a href="#fork">Fork Repo</a><a href="#support">Support</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="eyebrow"><span class="pulse"></span> SERVER TOOLS · READY TO USE</div>
+      <h1>Launch your own<br><span class="gradient-text">TEDDY-XMD BOT.</span></h1>
+      <p class="hero-copy">Everything you need in one place. Get your session, fork the official repository, and choose a hosting platform.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://www.teddyxmd.run.place/" target="_blank" rel="noopener">Get Session <span>↗</span></a>
+        <a class="btn btn-outline" href="https://github.com/Teddyxmd/TEDDY-XMD/fork" target="_blank" rel="noopener">Fork Repository <span>↗</span></a>
+      </div>
+      <div class="hero-meta"><span>● PUBLIC RELEASE</span><span>NODE.JS</span><span>POWERED BY TEDDY TECH</span></div>
+    </section>
+
+    <section class="section" id="pairing">
+      <div class="section-heading"><div><div class="eyebrow">01 / CONNECT</div><h2>Get your session</h2></div><p>Generate a WhatsApp pairing session before deploying your bot.</p></div>
+      <div class="pair-grid">
+        <article class="feature-card session-card">
+          <div class="card-icon">⌁</div><div class="card-tag">PRIMARY PAIRING SERVER</div>
+          <h3>TEDDY-XMD Session</h3><p>Open the official session server, enter your WhatsApp number and follow the pairing instructions.</p>
+          <a class="btn btn-primary full" href="https://www.teddyxmd.run.place/" target="_blank" rel="noopener">Open Pairing Server <span>↗</span></a>
+        </article>
+        <article class="feature-card secondary-card">
+          <div class="card-icon">＋</div><div class="card-tag">SECONDARY SERVER</div>
+          <h3>Backup pairing link</h3><p>A second pairing server can be added here when its public URL is available.</p>
+          <span class="btn btn-disabled full" aria-disabled="true">Coming soon</span>
+        </article>
+      </div>
+      <p class="notice">Keep your session ID private. Never share it with anyone; it can provide access to your WhatsApp account.</p>
+    </section>
+
+    <section class="section" id="fork">
+      <div class="section-heading"><div><div class="eyebrow">02 / SOURCE CODE</div><h2>Fork the repository</h2></div><p>Start from the official TEDDY-XMD source code on GitHub.</p></div>
+      <div class="repo-panel">
+        <div class="repo-symbol">⌘</div><div class="repo-info"><strong>Teddyxmd / TEDDY-XMD</strong><span>Official repository · GitHub</span></div>
+        <div class="repo-actions">
+          <a class="btn btn-primary" href="https://github.com/Teddyxmd/TEDDY-XMD/fork" target="_blank" rel="noopener">Fork Repository ↗</a>
+          <a class="btn btn-outline" href="https://github.com/Teddyxmd/TEDDY-XMD" target="_blank" rel="noopener">View Source ↗</a>
+        </div>
+      </div>
+      <div class="mini-grid">
+        <div class="mini-card"><span class="mini-number">01</span><strong>Fork</strong><p>Create your own copy of the project.</p></div>
+        <div class="mini-card"><span class="mini-number">02</span><strong>Configure</strong><p>Add your session and required environment settings.</p></div>
+        <div class="mini-card"><span class="mini-number">03</span><strong>Deploy</strong><p>Choose a hosting provider below.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="deploy">
+      <div class="section-heading"><div><div class="eyebrow">03 / HOSTING</div><h2>Choose your deployment</h2></div><p>Select a platform that fits your setup. Each option opens its provider's website.</p></div>
+      <div class="deploy-grid">
+        <a class="deploy-card" href="https://dashboard.heroku.com/new?template=https://github.com/Teddyxmd/TEDDY-XMD" target="_blank" rel="noopener"><span class="platform-icon heroku">H</span><span class="platform-name">Heroku</span><span class="platform-desc">Deploy from the GitHub template, if the repository has a valid app.json.</span><span class="platform-link">Open Heroku ↗</span></a>
+        <a class="deploy-card" href="https://railway.app/new" target="_blank" rel="noopener"><span class="platform-icon railway">R</span><span class="platform-name">Railway</span><span class="platform-desc">Create a project and connect your forked GitHub repository.</span><span class="platform-link">Open Railway ↗</span></a>
+        <a class="deploy-card" href="https://render.com/" target="_blank" rel="noopener"><span class="platform-icon render">R</span><span class="platform-name">Render</span><span class="platform-desc">Create a new service and deploy your forked GitHub repository.</span><span class="platform-link">Open Render ↗</span></a>
+        <a class="deploy-card" href="https://replit.com/" target="_blank" rel="noopener"><span class="platform-icon replit">◈</span><span class="platform-name">Replit</span><span class="platform-desc">Import your repository and configure the run command.</span><span class="platform-link">Open Replit ↗</span></a>
+        <a class="deploy-card" href="https://pterodactyl.io/" target="_blank" rel="noopener"><span class="platform-icon ptero">P</span><span class="platform-name">Pterodactyl Panel</span><span class="platform-desc">Use a Node.js server and upload or clone your bot files.</span><span class="platform-link">Open Pterodactyl ↗</span></a>
+        <a class="deploy-card" href="https://katabump.com/" target="_blank" rel="noopener"><span class="platform-icon kata">K</span><span class="platform-name">KataBump</span><span class="platform-desc">Use your hosting panel's Node.js deployment workflow.</span><span class="platform-link">Open KataBump ↗</span></a>
+        <a class="deploy-card" href="https://bot-hosting.net/" target="_blank" rel="noopener"><span class="platform-icon bot">B</span><span class="platform-name">Bot-Hosting</span><span class="platform-desc">Create a bot server and configure its startup settings.</span><span class="platform-link">Open Bot-Hosting ↗</span></a>
+        <a class="deploy-card" href="https://github.com/" target="_blank" rel="noopener"><span class="platform-icon vps">⌘</span><span class="platform-name">VPS / Self-host</span><span class="platform-desc">Run on your own Linux server with Node.js and a process manager.</span><span class="platform-link">Open GitHub ↗</span></a>
+      </div>
+    </section>
+
+    <section class="section community" id="support">
+      <div class="section-heading"><div><div class="eyebrow">04 / COMMUNITY</div><h2>Support the project</h2></div><p>Stay connected with updates or reach the developer directly.</p></div>
+      <div class="community-grid">
+        <a class="community-card whatsapp" href="https://whatsapp.com/channel/0029Vb6NveDBPzjPa4vIRt3n" target="_blank" rel="noopener"><span class="community-icon">◉</span><strong>Join WhatsApp Channel</strong><span>News, updates and announcements</span><b>Join channel ↗</b></a>
+        <a class="community-card contact" href="https://wa.me/254799963583" target="_blank" rel="noopener"><span class="community-icon">✆</span><strong>Contact Teddy</strong><span>Developer support on WhatsApp</span><b>Message developer ↗</b></a>
+        <a class="community-card coffee" href="https://wa.me/254799963583?text=Hi%20Teddy%2C%20I%27d%20like%20to%20support%20the%20TEDDY-XMD%20project." target="_blank" rel="noopener"><span class="community-icon">☕</span><strong>Buy Teddy a Coffee</strong><span>Support development and maintenance</span><b>Support Teddy ↗</b></a>
+      </div>
+      <p class="support-note">The support link currently opens WhatsApp. Replace it with your preferred donation or M-Pesa payment link when ready.</p>
+    </section>
+  </main>
+
+  <footer><a class="footer-brand" href="#home">🧸 TEDDY-XMD</a><span>King of automation · Powered by Teddy Tech</span><span>© <span id="year"></span> TEDDY-XMD</span></footer>
+  <script>
+const menuToggle = document.getElementById("menuToggle");
+const nav = document.getElementById("nav");
+
+menuToggle.addEventListener("click", () => {
+  const isOpen = nav.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.textContent = isOpen ? "✕" : "☰";
+});
+
+nav.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.textContent = "☰";
+  });
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+  </script>
+</body>
+</html>
